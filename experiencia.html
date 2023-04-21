@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi experiencia</title>
+</head>
+<body>
+<center>
+    <h2>Esta fue mi experiencia</h2>
+</center>
+
+<center>
+    <video id="video" src="video.mp4" autoplay width="500" height="500"></video>
+</center>
+
+<center>
+    <button onclick="toggleVideo()">Reproducir/Detener</button>
+</center>
+
+<div id="divBotones">
+	<center>
+        <a href="index.html">Anterior</a>
+
+	</center>
+
+</div>
+
+</body>
+</html>
+
+<script>
+  var video = document.getElementById("video");
+  var playing = false;
+
+  function toggleVideo() {
+    if (playing) {
+      video.pause();
+      playing = false;
+      document.getElementById("play-button").textContent = "Reproducir";
+    } else {
+      video.play();
+      playing = true;
+      document.getElementById("play-button").textContent = "Pausar";
+    }
+  }
+</script>
